@@ -24,7 +24,7 @@
 
     html { scroll-behavior: smooth; }
 
-    body {
+    body { word-break: keep-all; overflow-wrap: break-word;
       font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, sans-serif;
       font-size: 16px;
       line-height: 1.8;
@@ -76,7 +76,7 @@
       font-size: 28px;
       font-weight: 800;
       line-height: 1.35;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
     /* ════════════════════════════════
@@ -84,7 +84,7 @@
     ════════════════════════════════ */
     #hero {
       background: var(--primary);
-      min-height: 90vh;
+      min-height: 85vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -125,7 +125,7 @@
 
     /* Trust Badges */
     .trust-scroll-wrap {
-      overflow-x: auto;
+      overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
       margin: 0 -20px 28px;
@@ -458,7 +458,7 @@
       background: #fff;
       border: 1px solid #e5e7eb;
       border-radius: var(--radius);
-      padding: 20px;
+      padding: 22px 24px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     }
 
@@ -656,7 +656,7 @@
     .step-desc {
       font-size: 14px;
       color: var(--text-muted);
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     /* ════════════════════════════════
@@ -674,7 +674,7 @@
     .lawyer-card {
       background: var(--light-bg);
       border-radius: var(--radius);
-      padding: 20px;
+      padding: 22px 24px;
       display: flex;
       gap: 16px;
       align-items: flex-start;
@@ -711,7 +711,7 @@
     .lawyer-career {
       font-size: 13px;
       color: var(--text-muted);
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     .lawyer-tags {
@@ -917,7 +917,7 @@
     .agree-text {
       font-size: 13px;
       color: rgba(255,255,255,0.65);
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     .agree-text strong { color: rgba(255,255,255,0.9); }
@@ -981,7 +981,7 @@
       font-size: 16px;
       font-weight: 800;
       color: #fff;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
     .footer-info {
@@ -1242,7 +1242,7 @@
     <p class="section-label">예상 환급 범위</p>
     <h2 class="section-title">업종별 예상 환급 금액</h2>
 
-    <table class="refund-table">
+    <div style="overflow-x:auto;border-radius:8px;"><table class="refund-table">
       <thead>
         <tr>
           <th>업종</th>
@@ -1263,7 +1263,7 @@
           <td>2,000만원 내외</td>
         </tr>
       </tbody>
-    </table>
+    </table></div>
 
     <p class="disclaimer">* 위 금액은 과거 유사 사례를 기반으로 한 참고치이며, 실제 환급액은 계약 내용·운영 기간·물류 데이터 등에 따라 개인별로 달라집니다. 정확한 금액은 무료 진단을 통해 확인하세요.</p>
 
